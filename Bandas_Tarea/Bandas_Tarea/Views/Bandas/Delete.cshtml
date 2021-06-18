@@ -1,0 +1,47 @@
+﻿@model Bandas_Tarea.Models.Bandas
+
+@{
+    ViewData["Tittle"] = "Borrar banda";
+
+}
+
+<style>
+    h3 {
+        color: whitesmoke;
+        background-color: darkblue;
+    }
+</style>
+
+
+<h3 align="center">Esta seguro de eliminar esta banda?</h3>
+<thead>
+    <tr>
+        <th>
+            <h5>
+                <b>@Html.DisplayNameFor(model => model.BandaNombre)</b>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <b>@Html.DisplayNameFor(model => model.BandaGenero)</b>
+            </h5>
+        </th>
+        <th></th>
+    </tr>
+</thead>
+<dd class="col-sm-12">
+    <h5>
+        @Html.DisplayFor(Model => Model.BandaNombre)
+        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        @Html.DisplayFor(Model => Model.BandaGenero)
+    </h5>
+
+</dd>
+
+
+<div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="BandaId" />
+        <input type="submit" class="btn btn-danger" value="Borrar" />
+        <a asp-action="Index" class="btn btn-success">Regresar</a>
+    </form>
+
+
+</div>

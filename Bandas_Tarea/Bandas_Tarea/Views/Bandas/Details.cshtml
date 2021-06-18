@@ -1,0 +1,48 @@
+﻿@model Bandas_Tarea.Models.Bandas
+
+@{
+    ViewData["Tittle"] = "Detalles de la banda";
+
+}
+
+<style>
+    h2 {
+        color: whitesmoke;
+        background-color: darkblue;
+    }
+</style>
+
+
+<h2 align="center">Detalles de la banda</h2>
+<hr />
+
+    <h4>Banda:</h4>
+    <thead>
+        <tr>
+            <th>
+                <h5>
+                    <b>@Html.DisplayNameFor(model => model.BandaNombre)</b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>@Html.DisplayNameFor(model => model.BandaGenero)</b>
+                </h5>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <dd class="col-sm-12">
+        <h5>
+            @Html.DisplayFor(Model => Model.BandaNombre)
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            @Html.DisplayFor(Model => Model.BandaGenero)
+        </h5>
+        
+    </dd>
+    
+
+
+    <div>
+      
+        <a asp-action="Edit" class="btn btn-warning" asp-route-id=" @Model.BandaId">Editar</a>
+        <a asp-action="Index" class="btn btn-success">Regresar</a>
+
+    </div>
